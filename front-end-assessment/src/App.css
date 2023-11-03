@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="checkbox"]:checked {
+  background-image: url("./assets/icons/check.svg") no-repeat;
+}
+.filter-red {
+  filter: invert(18%) sepia(83%) saturate(2995%) hue-rotate(345deg)
+    brightness(80%) contrast(99%);
+}
+
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}
+
+.modalBg {
+  background-color: rgba(113, 113, 113, 0.3);
+  transition: background-color 0.3s linear;
+}
+
+.modalBgRemoval {
+  background-color: none;
+  transition: background-color 0.3s linear;
+}
+
+.modal-slide-in {
+  animation-name: slide-in;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.modal-slide-out {
+  animation-name: slide-out;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.modal-slide-down {
+  animation-name: slide-down;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.modal-slide-up {
+  animation-name: slide-up;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(+100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 1;
+    display: none;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 1;
+    display: none;
+  }
+}
