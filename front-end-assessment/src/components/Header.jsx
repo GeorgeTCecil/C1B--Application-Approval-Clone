@@ -1,4 +1,4 @@
-import logo from "../assets/icons/creditOneLogo.svg";
+import logo from "../assets/icons/credit-one-logo.svg";
 
 const Header = (props) => {
   return (

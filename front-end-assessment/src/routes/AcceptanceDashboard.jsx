@@ -4,14 +4,14 @@ import CreditProtectionDrawer from "../components/CreditProtectionDrawer";
 import PortalPopup from "../components/PortalPopup";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import animated from "../assets/icons/animated-cp-2.svg";
-import numOne from "../assets/icons/numOne.svg";
-import numTwo from "../assets/icons/numTwo.svg";
-import numThree from "../assets/icons/numThree.svg";
-import numFour from "../assets/icons/numFour.svg";
-import nascarAmex from "../assets/icons/nascar-amex-stripes.png";
-import warningIcon from "../assets/icons/warningIcon.svg";
-import Button from "../components/button";
+import animated from "../assets/icons/animated-cp.svg";
+import numOne from "../assets/icons/number-one-bullet.svg";
+import numTwo from "../assets/icons/number-two-bullet.svg";
+import numThree from "../assets/icons/number-three-bullet.svg";
+import numFour from "../assets/icons/number-four-bullet.svg";
+import nascarAmex from "../assets/icons/nascar-amex-card.png";
+import warningIcon from "../assets/icons/warning-icon.svg";
+import Button from "../components/Button";
 
 const AcceptanceDashboard = () => {
   const [isCreditProtectionDrawerOpen, setCreditProtectionDrawerOpen] =

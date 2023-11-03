@@ -1,5 +1,5 @@
-import adobeIcon from "../assets/icons/adobeIcon.svg";
-import lockIcon from "../assets/icons/lockIcon.svg";
+import adobeIcon from "../assets/icons/adobe-icon.svg";
+import lockIcon from "../assets/icons/lock-icon.svg";
 
 const Footer = (props) => {
   const inModal = props.inModal ? "" : "absolute";
