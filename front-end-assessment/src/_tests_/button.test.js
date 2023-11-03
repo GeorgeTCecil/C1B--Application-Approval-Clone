@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Button from "../components/Button"; // Import your Button component
+import Button from "../components/Button";
 
 test("Button component renders with default props", () => {
   const { getByText } = render(<Button>Click Me</Button>);
@@ -28,6 +28,7 @@ test("Button component renders with custom props", () => {
   expect(buttonElement).toHaveClass(
     "overflow-y-auto cursor-pointer  rounded-full font-bold  border-solid border-2 border-credit-one-blue h-auto pt-2 pb-2 w-auto pl-4 pr-4 text-xs"
   );
+  //Check to ensure that the onClick function is called when initiated
   fireEvent.click(buttonElement);
   expect(onClickMock).toHaveBeenCalledTimes(1);
 });

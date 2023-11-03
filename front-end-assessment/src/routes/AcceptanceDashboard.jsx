@@ -5,7 +5,7 @@ import PortalPopup from "../components/PortalPopup";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import cpLogo from "../assets/icons/animated-cp.svg";
-import cpLogoSuccess from "../assets/icons/animated-cp-success.svg"
+import cpLogoSuccess from "../assets/icons/animated-cp-success.svg";
 import numOne from "../assets/icons/number-one-bullet.svg";
 import numTwo from "../assets/icons/number-two-bullet.svg";
 import numThree from "../assets/icons/number-three-bullet.svg";
@@ -15,7 +15,8 @@ import warningIcon from "../assets/icons/warning-icon.svg";
 import Button from "../components/Button";
 
 const AcceptanceDashboard = () => {
-  const [isCreditProtectionDrawerOpen, setCreditProtectionDrawerOpen] = useState(false);
+  const [isCreditProtectionDrawerOpen, setCreditProtectionDrawerOpen] =
+    useState(false);
   const [initials, setInitials] = useState("");
 
   const [isInit, setIsInit] = useState(false);
@@ -65,7 +66,7 @@ const AcceptanceDashboard = () => {
 
   const handleUpdateInitials = (newValue) => {
     setInitials(newValue);
- };
+  };
 
   return (
     <>
@@ -73,10 +74,17 @@ const AcceptanceDashboard = () => {
         <Header />
         <div className="p-6 mt-[95px] pb-9 sm:p-0 sm:m-0 sm:mt-[88px] items-center flex justify-center bg-white box-border w-full h-12 overflow-hidden text-sm border-b border-solid border-grey190 leading-5">
           <div className="flex align-center">
-            <img className="inherit w-6 h-6" alt="" src={warningIcon} />
+            <img
+              className="inherit w-6 h-6"
+              alt="Warning Icon"
+              src={warningIcon}
+            />
             <span className="mx-2">
               For your security, please close your browser after you{" "}
-              <a href="" className="text-credit-one-blue">print this page</a>.
+              <a href="" className="text-credit-one-blue">
+                print this page
+              </a>
+              .
             </span>
           </div>
         </div>
@@ -93,7 +101,7 @@ const AcceptanceDashboard = () => {
             </p>
             <img
               className="col-start-1 col-span-6 mt-6 shadow-lg w-64 h-40"
-              alt=""
+              alt="Credit One Bank American Express card with NASCAR graphics"
               src={nascarAmex}
             />
             <p className="col-start-2 col-span-4 text-sm text-neutrals-grey118 ">
@@ -110,28 +118,28 @@ const AcceptanceDashboard = () => {
               <div className="pl-3 sm:pl-28 sm:w-[27.25rem] flex flex-col sm:flex-nowrap sm:shrink flex-wrap w-[19rem] items-start justify-start gap-8">
                 <div className="self-stretch flex flex-row items-center justify-start gap-4">
                   <div className="self-stretch flex flex-row items-start justify-start pt-[0.25rem] px-[0rem] pb-[0rem]">
-                    <img className="w-8 h-8" alt="" src={numOne} />
+                    <img className="w-8 h-8" alt="One" src={numOne} />
                   </div>
                   <div className="flex-1">
                     Please print this page for your records
                   </div>
                 </div>
                 <div className="self-stretch flex flex-row items-center justify-start gap-4">
-                  <img className="w-8 h-8" alt="" src={numTwo} />
+                  <img className="w-8 h-8" alt="Two" src={numTwo} />
                   <div className="flex-1">
                     After our final verification process is complete, your new
                     credit card will be mailed to you within 10 business days.
                   </div>
                 </div>
                 <div className="self-stretch flex flex-row items-center justify-start gap-4">
-                  <img className="w-8 h-8" alt="" src={numThree} />
+                  <img className="w-8 h-8" alt="Three" src={numThree} />
                   <div className="flex-1">
                     You will be notified via email when your credit card is
                     mailed.
                   </div>
                 </div>
                 <div className="self-stretch flex flex-row items-center justify-start gap-4">
-                  <img className="w-8 h-8" alt="" src={numFour} />
+                  <img className="w-8 h-8" alt="Four" src={numFour} />
                   <div className="flex-1">
                     Once you receive your credit card you can begin using your
                     card immediately upon activation.
@@ -143,57 +151,55 @@ const AcceptanceDashboard = () => {
               <p className="mb-6 text-2xl inline-block w-[28.5rem]">
                 Are you protected?
               </p>
-              {initials.length == 0 &&
-              <div
-                className="p-4 pl-3.5 sm:pl-5 bg-white box-border w-[20.5rem] sm:w-[28.5rem] flex cursor-pointer border border-solid border-text-neutrals-grey118 sm:items-center rounded-sm"
-                onClick={openCreditProtectionDrawer}
-              >
-                <img
-                  className="w-20 h-20 sm:w-24 sm:h-24"
-                  alt=""
-                  src={cpLogo}
-                />
-                <div className="inline-block pl-3 sm:pl-6">
-                  <p className="w-52 sm:w-64 mt-0">
-                    <b>Make sure you’re covered with Credit Protection.</b>
-                  </p>
-                  <Button isFilled={false} name="Enroll">
-                    Enroll Today
-                  </Button>
+              {initials.length == 0 && (
+                <div
+                  className="p-4 pl-3.5 sm:pl-5 bg-white box-border w-[20.5rem] sm:w-[28.5rem] flex cursor-pointer border border-solid border-text-neutrals-grey118 sm:items-center rounded-sm"
+                  onClick={openCreditProtectionDrawer}
+                >
+                  <img
+                    className="w-20 h-20 sm:w-24 sm:h-24"
+                    alt="Credit Protection lock icon"
+                    src={cpLogo}
+                  />
+                  <div className="inline-block pl-3 sm:pl-6">
+                    <p className="w-52 sm:w-64 mt-0">
+                      <b>Make sure you’re covered with Credit Protection.</b>
+                    </p>
+                    <Button isFilled={false} name="Enroll">
+                      Enroll Today
+                    </Button>
+                  </div>
                 </div>
-              </div>
-              }
-              {initials.length > 0 &&
-
-              <div
-                className="p-4 pl-3.5 pb-2.5 sm:pb-4 sm:pl-5 bg-white box-border w-[20.5rem] sm:w-[28.5rem] flex border border-solid border-text-neutrals-grey118 sm:items-center rounded-sm"
-              >
-                <img
-                  className="w-20 sm:w-24 h-24"
-                  alt=""
-                  src={cpLogoSuccess}
-                />
-                <div className="inline-block pl-5 sm:pl-6">
-                  <p className="w-52 sm:w-64 mt-0 mb-1.5">
-                    <b>Your Account is protected!</b>
-                  </p>
-                  <p className="w-52 sm:w-64 mt-0">
-                    You are enrolled in Credit Protection.
-                  </p>
+              )}
+              {initials.length > 0 && (
+                <div className="p-4 pl-3.5 pb-2.5 sm:pb-4 sm:pl-5 bg-white box-border w-[20.5rem] sm:w-[28.5rem] flex border border-solid border-text-neutrals-grey118 sm:items-center rounded-sm">
+                  <img
+                    className="w-20 sm:w-24 h-24"
+                    alt="Credit Protection lock icon with success checkmark"
+                    src={cpLogoSuccess}
+                  />
+                  <div className="inline-block pl-5 sm:pl-6">
+                    <p className="w-52 sm:w-64 mt-0 mb-1.5">
+                      <b>Your Account is protected!</b>
+                    </p>
+                    <p className="w-52 sm:w-64 mt-0">
+                      You are enrolled in Credit Protection.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              };
+              )}
+              ;
             </div>
           </div>
         </div>
         <Footer />
       </div>
       {isCreditProtectionDrawerOpen && (
-        <PortalPopup
-          id="credit-protection-drawer"
-          placement="End"
-        >
-          <CreditProtectionDrawer onClose={handleCloseTransition} handleUpdateInitials={handleUpdateInitials} />
+        <PortalPopup id="credit-protection-drawer" placement="End">
+          <CreditProtectionDrawer
+            onClose={handleCloseTransition}
+            handleUpdateInitials={handleUpdateInitials}
+          />
         </PortalPopup>
       )}
     </>
