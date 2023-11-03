@@ -87,7 +87,7 @@ const AcceptanceDashboard = () => {
               (Pending final verification of your information and identity)
             </p>
             <img
-              className="col-start-1 col-span-6 mt-6 shadow-[0px_4px_15px_rgba(0,_0,_0,_0.1),_0px_2px_30px_rgba(0,_0,_0,_0.08)] w-64 h-40"
+              className="col-start-1 col-span-6 mt-6 shadow-lg w-64 h-40"
               alt=""
               src={nascarAmex}
             />
