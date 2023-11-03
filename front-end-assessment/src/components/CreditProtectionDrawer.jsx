@@ -44,6 +44,7 @@ const CreditProtectionDrawer = (props) => {
     if (!initials || initials === "") {
       toggleVisibility();
     } else {
+      props.handleUpdateInitials(initials);
       props.onClose();
     }
 
