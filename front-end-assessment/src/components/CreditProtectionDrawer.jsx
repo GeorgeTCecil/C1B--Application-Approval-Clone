@@ -47,8 +47,6 @@ const CreditProtectionDrawer = (props) => {
       props.handleUpdateInitials(initials);
       props.onClose();
     }
-
-    console.log(initials);
   };
 
   return (
