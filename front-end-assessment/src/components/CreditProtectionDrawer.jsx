@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
-import closeIcon from "../assets/icons/icon-closeutility--linefalse.svg";
-import modalLock from "../assets/icons/modalLock.svg";
-import backChevron from "../assets/icons/backChevron.svg";
+import closeIcon from "../assets/icons/close-utility.svg";
+import modalLock from "../assets/icons/modal-lock.svg";
+import backChevron from "../assets/icons/back-chevron.svg";
 import checkmark from "../assets/icons/checkmark.svg";
-import pdfIcon from "../assets/icons/pdfIcon.svg";
-import Button from "./button";
+import pdfIcon from "../assets/icons/pdf-icon.svg";
+import Button from "./Button";
 import InitialsInputField from "./InitialsInputField";
-import warningIcon from "../assets/icons/warningIcon.svg";
+import warningIcon from "../assets/icons/warning-icon.svg";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -177,7 +177,7 @@ const CreditProtectionDrawer = (props) => {
                   </div>
                 </div>
               </div>
-              <form onSubmit={handleSubmit}>
+              <form>
                 <div className="flex items-center gap-4">
                   <InitialsInputField handleCallback={Callback} />
                   <p className="text-base font-bold">
@@ -188,7 +188,7 @@ const CreditProtectionDrawer = (props) => {
 
                 <div className="flex justify-center pt-10">
                   <Button isFilled={true}>
-                    <div className="text-base font-semibold">
+                    <div onClick={handleSubmit} className="text-base font-semibold">
                       Confirm Enrollment
                     </div>
                   </Button>
