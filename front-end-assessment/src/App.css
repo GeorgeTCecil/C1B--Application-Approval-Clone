@@ -99,3 +99,148 @@ body {
     display: none;
   }
 }
+
+@media screen and (min-width: 640px) {
+  .cp-slideshow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    overflow: hidden;
+    position: relative;
+    background-color: #cee5ff;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .cp-slideshow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    position: relative;
+    background-color: #cee5ff;
+  }
+}
+
+.slide-cp-lock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: slide-cp-1 5s ease-in-out infinite;
+}
+
+.slide-cp-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: slide-cp-2 5s ease-in-out infinite;
+}
+
+@keyframes slide-cp-1 {
+  0% {
+    transform: translateX(0%);
+  }
+  34% {
+    transform: translateX(0%);
+  }
+  39.5% {
+    transform: translateX(100%);
+  }
+  39.5001% {
+    transform: translateX(-100%);
+  }
+  84% {
+    transform: translateX(-100%);
+  }
+  90% {
+    transform: translateX(5%);
+  }
+  94% {
+    transform: translateX(-3%);
+  }
+  97.5% {
+    transform: translateX(1%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-cp-2 {
+  0% {
+    transform: translateX(-100%);
+  }
+  34% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(5%);
+  }
+  44% {
+    transform: translateX(-3%);
+  }
+  47.5% {
+    transform: translateX(1%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  84% {
+    transform: translateX(0%);
+  }
+  89.5% {
+    transform: translateX(100%);
+  }
+  89.5001% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.success-slide {
+  width: 96px;
+  height: 96px;
+  animation: slide-image-1 5s ease-in-out infinite;
+}
+
+@media screen and (min-width: 640px) {
+  .cp-success-container {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .cp-success-container {
+    position: relative;
+    width: 10rem;
+    overflow: hidden;
+    margin-right: -1.25rem;
+  }
+}
+
+.cp-badge {
+  position: absolute;
+  animation: top-slide 1s ease-in-out;
+}
+
+@keyframes top-slide {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

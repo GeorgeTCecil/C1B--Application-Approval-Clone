@@ -4,8 +4,7 @@ import CreditProtectionDrawer from "../components/CreditProtectionDrawer";
 import PortalPopup from "../components/PortalPopup";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import cpLogo from "../assets/icons/animated-cp.svg";
-import cpLogoSuccess from "../assets/icons/animated-cp-success.svg";
+import animatedCPLock from "../assets/icons/animated-cp-lock.svg";
 import numOne from "../assets/icons/number-one-bullet.svg";
 import numTwo from "../assets/icons/number-two-bullet.svg";
 import numThree from "../assets/icons/number-three-bullet.svg";
@@ -13,6 +12,7 @@ import numFour from "../assets/icons/number-four-bullet.svg";
 import nascarAmex from "../assets/icons/nascar-amex-card.png";
 import warningIcon from "../assets/icons/warning-icon.svg";
 import Button from "../components/Button";
+import AnimatedCPLogo from "../components/AnimatedCPLogo";
 
 const AcceptanceDashboard = () => {
   const [isCreditProtectionDrawerOpen, setCreditProtectionDrawerOpen] =
@@ -118,28 +118,40 @@ const AcceptanceDashboard = () => {
               <div className="pl-3 sm:pl-28 sm:w-[27.25rem] flex flex-col sm:flex-nowrap sm:shrink flex-wrap w-[19rem] items-start justify-start gap-8">
                 <div className="self-stretch flex flex-row items-center justify-start gap-4">
                   <div className="self-stretch flex flex-row items-start justify-start pt-[0.25rem] px-[0rem] pb-[0rem]">
-                    <img className="w-8 h-8" alt="One" src={numOne} />
+                    <img
+                      className="w-8 h-8"
+                      alt="Blue One Bullet"
+                      src={numOne}
+                    />
                   </div>
                   <div className="flex-1">
                     Please print this page for your records
                   </div>
                 </div>
                 <div className="self-stretch flex flex-row items-center justify-start gap-4">
-                  <img className="w-8 h-8" alt="Two" src={numTwo} />
+                  <img className="w-8 h-8" alt="Blue Two Bullet" src={numTwo} />
                   <div className="flex-1">
                     After our final verification process is complete, your new
                     credit card will be mailed to you within 10 business days.
                   </div>
                 </div>
                 <div className="self-stretch flex flex-row items-center justify-start gap-4">
-                  <img className="w-8 h-8" alt="Three" src={numThree} />
+                  <img
+                    className="w-8 h-8"
+                    alt="Blue Three Bullet"
+                    src={numThree}
+                  />
                   <div className="flex-1">
                     You will be notified via email when your credit card is
                     mailed.
                   </div>
                 </div>
                 <div className="self-stretch flex flex-row items-center justify-start gap-4">
-                  <img className="w-8 h-8" alt="Four" src={numFour} />
+                  <img
+                    className="w-8 h-8"
+                    alt="Blue Four Bullet"
+                    src={numFour}
+                  />
                   <div className="flex-1">
                     Once you receive your credit card you can begin using your
                     card immediately upon activation.
@@ -156,11 +168,7 @@ const AcceptanceDashboard = () => {
                   className="p-4 pl-3.5 sm:pl-5 bg-white box-border w-[20.5rem] sm:w-[28.5rem] flex cursor-pointer border border-solid border-text-neutrals-grey118 sm:items-center rounded-sm"
                   onClick={openCreditProtectionDrawer}
                 >
-                  <img
-                    className="w-20 h-20 sm:w-24 sm:h-24"
-                    alt="Credit Protection lock icon"
-                    src={cpLogo}
-                  />
+                  <AnimatedCPLogo />
                   <div className="inline-block pl-3 sm:pl-6">
                     <p className="w-52 sm:w-64 mt-0">
                       <b>Make sure you’re covered with Credit Protection.</b>
@@ -173,11 +181,31 @@ const AcceptanceDashboard = () => {
               )}
               {initials.length > 0 && (
                 <div className="p-4 pl-3.5 pb-2.5 sm:pb-4 sm:pl-5 bg-white box-border w-[20.5rem] sm:w-[28.5rem] flex border border-solid border-text-neutrals-grey118 sm:items-center rounded-sm">
-                  <img
-                    className="w-20 sm:w-24 h-24"
-                    alt="Credit Protection lock icon with success checkmark"
-                    src={cpLogoSuccess}
-                  />
+                  <div className="cp-success-container">
+                    <img
+                      className={"h-20 w-19 sm:h-[96px] sm:w-[96px]"}
+                      src={animatedCPLock}
+                      alt="Credit Protection Successful Enrollment Icon"
+                    />
+                    <div className="cp-badge relative bottom-[30px] -left-0 sm:absolute sm:top-0 sm:left-0">
+                      <svg
+                        className="h-20 w-19 sm:h-[96px] sm:w-[96px]"
+                        viewBox="0 0 97 97"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="80" cy="15.973" r="16" fill="#008638" />
+                        <path
+                          d="m85.563 11.348-7.876 9.25-3.25-3.25"
+                          stroke="#fff"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
                   <div className="inline-block pl-5 sm:pl-6">
                     <p className="w-52 sm:w-64 mt-0 mb-1.5">
                       <b>Your Account is protected!</b>
@@ -188,7 +216,6 @@ const AcceptanceDashboard = () => {
                   </div>
                 </div>
               )}
-              ;
             </div>
           </div>
         </div>
