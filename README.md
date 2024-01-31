@@ -1,4 +1,4 @@
-<h1 align="center">Credit One Bank - Application Approval Clone</h1>
+<h1 align="center">Credit One Bank - Application Approval Page</h1>
 
 ## Features
 - This is a single page application.
